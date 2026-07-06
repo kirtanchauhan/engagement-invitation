@@ -147,13 +147,13 @@
     font-size:clamp(3.2rem,12vw,7rem);line-height:.98;margin:0;
     display:flex;flex-direction:column;align-items:center;gap:.04em;
   }
-  .amp{font-family:"Pinyon Script",cursive;color:var(--rose);font-size:.62em;font-weight:400;line-height:1;margin:.04em 0;}
+  .amp{font-family:"Pinyon Script",cursive;color:var(--rose);font-size:.62em;font-weight:400;line-height:1;margin:.15em 0 .7rem;}
   .name-group{display:flex;flex-direction:column;align-items:center;}
   .parentage{
     font-family:var(--font-display);font-style:italic;font-weight:400;
     font-size:clamp(.94rem,2vw,1.2rem);
     letter-spacing:.012em;color:var(--rose);opacity:.96;
-    line-height:1.4;margin-top:.7rem;text-align:center;max-width:26ch;
+    line-height:1.4;margin-bottom:.55rem;text-align:center;max-width:26ch;
   }
   body.lang-hi .parentage,body.lang-gu .parentage{
     font-style:normal;font-size:clamp(.9rem,2vw,1.12rem);opacity:.92;max-width:30ch;
@@ -435,13 +435,13 @@
 
     <h1 class="names reveal">
       <span class="name-group">
-        <span data-i18n="name1">Kirtan</span>
         <span class="parentage" data-i18n="parent1">S/O Rajesh Chauhan and Pratibha Chauhan</span>
+        <span data-i18n="name1">Kirtan</span>
       </span>
       <span class="amp" data-i18n="amp">&amp;</span>
       <span class="name-group">
-        <span data-i18n="name2">Shraddha</span>
         <span class="parentage" data-i18n="parent2">D/O Rajesh Kotiya and Pragna Kotiya</span>
+        <span data-i18n="name2">Shraddha</span>
       </span>
     </h1>
 
@@ -471,7 +471,6 @@
         <div class="unit"><div class="n" id="cd-days">--</div><div class="l" data-i18n="lbl_days">Days</div></div>
         <div class="unit"><div class="n" id="cd-hours">--</div><div class="l" data-i18n="lbl_hours">Hours</div></div>
         <div class="unit"><div class="n" id="cd-mins">--</div><div class="l" data-i18n="lbl_mins">Minutes</div></div>
-        <div class="unit"><div class="n" id="cd-secs">--</div><div class="l" data-i18n="lbl_secs">Seconds</div></div>
       </div>
     </div>
   </section>
@@ -600,7 +599,7 @@
     en:{
       title_page:"Kirtan & Shraddha — An Engagement Celebration",
       invocation:"Shree Ganeshay Namah  ||  Shree Chamunday Namah",
-      blessing:"By the grace of Shree Chamunda Mataji and Surapura Bapa, two hearts begin one journey — with grateful hearts, we thank the Divine for this joyous day.",
+      blessing:"By the grace of Chamunda Maa, two hearts begin one journey — with grateful hearts, we thank the Divine for this joyous day.",
       eyebrow_families:"Together with their families",
       name1:"Kirtan", amp:"&", name2:"Shraddha",
       parent1:"Son of Smt. Pratibha & Shri Rajesh Chauhan",
@@ -644,10 +643,10 @@
     hi:{
       title_page:"किर्तन और श्रद्धा — सगाई समारोह",
       invocation:"श्री गणेशाय नमः  ॥  श्री चामुण्डायै नमः",
-      blessing:"​श्री चामुंडा माताजी और सुरापुरा बापा की कृपा से दो हृदय एक हुए हैं — इस मंगल अवसर के लिए हम प्रभु का हृदय से आभार व्यक्त करते हैं।",
+      blessing:"चामुण्डा माँ की कृपा से दो हृदय एक हुए हैं — इस मंगल अवसर के लिए हम प्रभु का हृदय से आभार व्यक्त करते हैं।",
       eyebrow_families:"अपने परिवारों सहित",
       name1:"किर्तन", amp:"और", name2:"श्रद्धा",
-      parent1:"श्रीमती प्रतिभा एवं श्री राजेश  चौहान के सुपुत्र",
+      parent1:"श्रीमती प्रतिभा  एवं श्री राजेश  चौहान के सुपुत्र",
       parent2:"श्रीमती प्रज्ञा एवं श्री राजेश कोटिया की सुपुत्री",
       sub_engaged:"की सगाई हो रही है",
       hero_date:"रविवार, 30 अगस्त 2026",
@@ -688,7 +687,7 @@
     gu:{
       title_page:"કિર્તન અને શ્રદ્ધા — સગાઈ સમારોહ",
       invocation:"શ્રી ગણેશાય નમઃ  ॥  શ્રી ચામુંડાયૈ નમઃ",
-      blessing:"​શ્રી ચામુંડા માતાજી અને સુરાપુરા બાપા કૃપાથી બે હૃદય એક થયાં છે — આ મંગલ પ્રસંગ માટે અમે પ્રભુનો હૃદયપૂર્વક આભાર માનીએ છીએ.",
+      blessing:"ચામુંડા માની કૃપાથી બે હૃદય એક થયાં છે — આ મંગલ પ્રસંગ માટે અમે પ્રભુનો હૃદયપૂર્વક આભાર માનીએ છીએ.",
       eyebrow_families:"પોતાના પરિવારો સહિત",
       name1:"કિર્તન", amp:"અને", name2:"શ્રદ્ધા",
       parent1:"શ્રીમતી પ્રતિભા અને શ્રી રાજેશ ચૌહાણના સુપુત્ર",
@@ -769,12 +768,12 @@
     function tick(){
       if(isNaN(target)){ el.d.textContent='--'; return; }
       const diff = target - Date.now();
-      if(diff <= 0){ el.d.textContent=el.h.textContent=el.m.textContent=el.s.textContent='0'; return; }
+      if(diff <= 0){ el.d.textContent=el.h.textContent=el.m.textContent='0'; if(el.s) el.s.textContent='0'; return; }
       const s=Math.floor(diff/1000);
       el.d.textContent = Math.floor(s/86400);
       el.h.textContent = pad(Math.floor(s%86400/3600));
       el.m.textContent = pad(Math.floor(s%3600/60));
-      el.s.textContent = pad(s%60);
+      if(el.s) el.s.textContent = pad(s%60);
     }
     tick(); setInterval(tick,1000);
   })();
